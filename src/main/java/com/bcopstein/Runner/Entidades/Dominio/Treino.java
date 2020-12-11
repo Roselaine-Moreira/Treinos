@@ -10,24 +10,24 @@ public class Treino {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private int codigoTreino;
+  private Long codigoTreino;
   private double distancia;
   private double tempo;
 
   protected Treino() {
   }
 
-  public Treino(int codigoTreino, double distancia, double tempo) {
+  public Treino(Long codigoTreino, double distancia, double tempo) {
     this.codigoTreino = codigoTreino;
     this.distancia = distancia;
     this.tempo = tempo;
   }
 
-  public int getCodigoTreino() {
+  public Long getCodigoTreino() {
     return codigoTreino;
   }
 
-  public void setCodigoTreino(int codigoTreino) {
+  public void setCodigoTreino(long codigoTreino) {
     this.codigoTreino = codigoTreino;
   }
 

@@ -4,6 +4,10 @@ package com.bcopstein.Runner.CasosDeUso;
 // import com.bcopstein.Runner.Entidades.Treino;
 // import com.bcopstein.Runner.Entidades.TreinoAtribuido;
 
+//lista todos os corredores
+//informa o codigo do corredor devolve o treino
+//registra o treino, passa o código do treino, tempo e esfoço 
+
 // @Component
 public class ControleDeTreinos {
   // private Corredor corredores;

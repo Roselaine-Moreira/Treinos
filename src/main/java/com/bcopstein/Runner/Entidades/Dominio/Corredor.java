@@ -6,24 +6,24 @@ import javax.persistence.Id;
 @Entity
 public class Corredor {
   @Id
-  private int codigoCorredor;
+  private Long codigoCorredor;
   private String nomeCorredor;
   private int idade;
 
   protected Corredor() {
   }
 
-  public Corredor(int codigoCorredor, String nomeCorredor, int idade) {
+  public Corredor(Long codigoCorredor, String nomeCorredor, int idade) {
     this.codigoCorredor = codigoCorredor;
     this.nomeCorredor = nomeCorredor;
     this.idade = idade;
   }
 
-  public int getCodigoCorredor() {
+  public Long getCodigoCorredor() {
     return codigoCorredor;
   }
 
-  public void setCodigoCorredor(int codigoCorredor) {
+  public void setCodigoCorredor(Long codigoCorredor) {
     this.codigoCorredor = codigoCorredor;
   }
 
