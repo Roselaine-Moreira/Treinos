@@ -4,8 +4,11 @@ import java.util.Collection;
 import java.util.List;
 
 import com.bcopstein.Runner.CasosDeUso.ControleDeTreinos;
+import com.bcopstein.Runner.Entidades.Dominio.Corredor;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,10 +19,11 @@ public class TreinosController {
 
   private ControleDeTreinos ctrlTreinos;
   
-  //cadastro de Treino
-  @GetMapping(value = "/cadastro")
-  public String getOu() {
-    return "-----------------";
+  //envia a lista dos corredores
+  @PostMapping("/listaCorredores")
+  @CrossOrigin(origins = "*")
+  public Collection<Corredor> listaCorredores() {    
+    return ctrlTreinos.listaCorredores();
   }
 
   //cadastro de Corredor
