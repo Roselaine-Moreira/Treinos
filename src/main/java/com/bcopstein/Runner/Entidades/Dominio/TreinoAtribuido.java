@@ -1,7 +1,17 @@
 package com.bcopstein.Runner.Entidades.Dominio;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+
+@Entity
 public class TreinoAtribuido {
+  @Id
   private Long codigoTreinoAtribuido;
+
+//  @OneToOne
+//  @JoinColumn(nullable=false, unique=true)
   private Long codigoCorredor;
   private double tempoPrevisto;
   private double tempoExecutado;

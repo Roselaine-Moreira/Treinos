@@ -5,12 +5,15 @@ import java.util.List;
 
 import com.bcopstein.Runner.CasosDeUso.ControleDeTreinos;
 import com.bcopstein.Runner.Entidades.Dominio.Corredor;
+import com.bcopstein.Runner.Entidades.Dominio.Treino;
+import com.bcopstein.Runner.Entidades.Dominio.TreinoAtribuido;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -31,21 +34,29 @@ public class TreinosController {
     return ctrlTreinos.listaCorredores();
   }
 
-  // cadastro de Corredor
-  @GetMapping(value = "/corredor")
-  public String getOi() {
-    return "*******************";
+  // envia a lista todos os treinos
+  @GetMapping("/treinosAtribuidos")
+  @CrossOrigin(origins = "*")
+  public Collection<Treino> listaTreinos() {
+    return ctrlTreinos.listaTreinos();
   }
 
-  // exibe os treinos a fazer
-  @GetMapping(value = "/treinoAtribuido")
-  public String getOiii() {
-    return "/*/*/*/*/*";
-  }
 
-  // exibe os treinos feitos
-  @GetMapping(value = "/historico")
-  public String getOla() {
-    return "88888888888888";
-  }
+  // passa o codigo do corredor e devolve o treino
+    //recebe uma placa e libera o carro para uma nova locacao
+    // @PostMapping("/exibeTreino")
+    // @CrossOrigin(origins = "*")
+    // public boolean exibirTreino(@RequestParam final Long codCorredor) {    
+    //   return ctrlTreinos.getTreino(codCorredor);
+    // }
+
+    // @GetMapping("/exibeTreino")
+    // @CrossOrigin(origins = "*")
+    // public boolean exibirTreino(@RequestParam final Integer codProd,
+    //                           @RequestParam final Integer qtdade) {
+    //     return ctrlVendas.podeVender(codProd, qtdade);
+    // }
+
+  // registra o treino, passa o código do treino, tempo e esfoço 
+
 }
