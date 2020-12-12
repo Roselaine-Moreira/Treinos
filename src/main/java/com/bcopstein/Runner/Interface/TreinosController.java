@@ -35,7 +35,7 @@ public class TreinosController {
   }
 
   // envia a lista todos os treinos
-  @GetMapping("/treinosAtribuidos")
+  @GetMapping("/treinos")
   @CrossOrigin(origins = "*")
   public Collection<Treino> listaTreinos() {
     return ctrlTreinos.listaTreinos();
