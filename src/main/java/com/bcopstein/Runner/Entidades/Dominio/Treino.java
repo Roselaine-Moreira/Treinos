@@ -1,5 +1,6 @@
 package com.bcopstein.Runner.Entidades.Dominio;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -9,9 +10,13 @@ import javax.persistence.GenerationType;
 public class Treino {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long codigoTreino;
+
+  @Column(nullable = false)
   private double distancia;
+
+  @Column(nullable = false)
   private double tempo;
 
   protected Treino() {
