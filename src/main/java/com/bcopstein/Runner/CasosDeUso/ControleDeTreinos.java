@@ -27,24 +27,24 @@ public class ControleDeTreinos {
     this.treinos = treinos;
   }
 
-  // lista todos os corredores
-  public Collection<Corredor> listaCorredores() {
-    return corredores.todos();
-  }
+  // // lista todos os corredores
+  // public Collection<Corredor> listaCorredores() {
+  //   return corredores.todos();
+  // }
 
-    // lista todos os treinos
-    public Collection<Treino> listaTreinos() {
-      return treinos.todos();
-    }
+    // // lista todos os treinos
+    // public Collection<Treino> listaTreinos() {
+    //   return treinos.todos();
+    // }
 
   // public Corredor getCorredor(Long chave) {
   // return corredores.recupera(chave);
   // }
 
-  // informa o codigo do corredor devolve o treino
-  public Treino getTreino(Long chave) {
-    return treinos.recupera(chave);
-  }
+  // // informa o codigo do corredor devolve o treino
+  // public Treino getTreino(Long chave) {
+  //   return treinos.recupera(chave);
+  // }
 
   // registra o treino, passa o código do treino, tempo e esfoço
 
