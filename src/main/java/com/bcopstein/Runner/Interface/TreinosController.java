@@ -1,17 +1,11 @@
 package com.bcopstein.Runner.Interface;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 
 import com.bcopstein.Runner.CasosDeUso.ControleDeTreinos;
 import com.bcopstein.Runner.Entidades.Dominio.Corredor;
 import com.bcopstein.Runner.Entidades.Dominio.Treino;
 import com.bcopstein.Runner.Entidades.Dominio.TreinoAtribuido;
-import com.bcopstein.Runner.Entidades.Repositorio.Corredores;
-import com.bcopstein.Runner.Entidades.Repositorio.Treinos;
-import com.bcopstein.Runner.Entidades.Repositorio.TreinosAtribuidos;
-// import com.bcopstein.Runner.Entidades.Servicos.CorredoresService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,7 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -89,12 +82,20 @@ public class TreinosController {
     return treinosAtribuidos;
   }
 
-    // editar
-    @PutMapping("/editarTreinoAtribuido")
-    @CrossOrigin(origins = "*")
-    public TreinoAtribuido editar(@RequestBody TreinoAtribuido treinoAtribuido) {// @RequestBody parametro vem pelo corpo
-      TreinoAtribuido treinoAtribuidoEditado = controlTreinos.editarTreinoAtribuido(treinoAtribuido);
-      return  treinoAtribuidoEditado;
-    }
+  // editar
+  @PutMapping("/editarTreinoAtribuido")
+  @CrossOrigin(origins = "*")
+  public TreinoAtribuido editar(@RequestBody TreinoAtribuido treinoAtribuido) {// @RequestBody parametro vem pelo corpo
+    TreinoAtribuido treinoAtribuidoEditado = controlTreinos.editarTreinoAtribuido(treinoAtribuido);
+    return treinoAtribuidoEditado;
+  }
+
+  // inserir treino 
+  @PostMapping("/inserirTreino")
+  @CrossOrigin(origins = "*")
+  public Treino inserirTreino(@RequestBody Treino treino) {
+    Treino treinoSalvo = controlTreinos.inserirTreino(treino);
+    return treinoSalvo;
+  }
 
 }

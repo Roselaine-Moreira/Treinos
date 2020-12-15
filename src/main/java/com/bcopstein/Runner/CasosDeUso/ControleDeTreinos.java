@@ -4,8 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import com.bcopstein.Runner.Entidades.Dominio.Corredor;
+import com.bcopstein.Runner.Entidades.Dominio.Treino;
 import com.bcopstein.Runner.Entidades.Dominio.TreinoAtribuido;
 import com.bcopstein.Runner.Entidades.Repositorio.Corredores;
+import com.bcopstein.Runner.Entidades.Repositorio.Treinos;
 import com.bcopstein.Runner.Entidades.Repositorio.TreinosAtribuidos;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,8 @@ public class ControleDeTreinos {
   private Corredores corredoresRepository;
   @Autowired
   private TreinosAtribuidos treinosAtribuidosRepository;
+  @Autowired
+  private Treinos treinosRepository;
   private TreinoAtribuido treinoAtribuido;
   private Corredor corredor;
 
@@ -86,14 +90,21 @@ public class ControleDeTreinos {
     return resultado;
   }
 
+  // inserir treino
+  public Treino inserirTreino(Treino treino) {
+    Treino treinoSalvo = treinosRepository.save(treino);
+    return treinoSalvo;
+  }
+
   // // editar Treino Atribuido
   public TreinoAtribuido editarTreinoAtribuido(TreinoAtribuido codigoTreinoAtribuido) {
     TreinoAtribuido treinoAtribuidoEditado = treinosAtribuidosRepository.save(codigoTreinoAtribuido);
     return treinoAtribuidoEditado;
   }
 
-  // //  editar Treino Atribuido
-  // public TreinoAtribuido editarTreinoAtribuido(TreinoAtribuido codigoTreinoAtribuido)
+  // // editar Treino Atribuido
+  // public TreinoAtribuido editarTreinoAtribuido(TreinoAtribuido
+  // codigoTreinoAtribuido)
   // {
   // TreinoAtribuido tre = new
   // TreinoAtribuido(codigoTreinoAtribuido.getCodigoTreinoAtribuido(), null, 0,
