@@ -36,29 +36,56 @@ public class TreinoAtribuido {
   public Long getCodigoTreinoAtribuido() {
     return codigoTreinoAtribuido;
   }
+  public void setCodigoTreinoAtribuido(Long codigoTreinoAtribuido) {
+    this.codigoTreinoAtribuido = codigoTreinoAtribuido;
+  }
 
   public Long getCorredor() {
     return codigoCorredor;
   }
 
+  public void setCodigoCorredor(Long codigoCorredor) {
+    this.codigoCorredor = codigoCorredor;
+  }
+
   public double getTempoPrevisto() {
     return tempoPrevisto;
+  }
+  
+  public void setTempoPrevisto(double tempoPrevisto) {
+    this.tempoPrevisto = tempoPrevisto;
   }
 
   public double getTempoExecutado() {
     return tempoExecutado;
+  }
+  
+  public void setTempoExecutado(double tempoExecutado) {
+    this.tempoExecutado = tempoExecutado;
   }
 
   public double getDistanciaPrevista() {
     return distanciaPrevista;
   }
 
+  public void setDistanciaPrevista(double distanciaPrevista) {
+    this.distanciaPrevista = distanciaPrevista;
+  }
+
   public double getDistanciaExecutada() {
     return distanciaExecutada;
   }
 
+  public void setDistanciaExecutada(double distanciaExecutada) {
+    this.distanciaExecutada = distanciaExecutada;
+  }
+
   public int getEsforco() {
     return esforco;
+  }
+
+  public void setEsforco(int esforco) {
+    this.esforco = esforco;
   }
 
   @Override
